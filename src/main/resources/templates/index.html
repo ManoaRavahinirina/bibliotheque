@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Accueil – Bibliothèque </title>
+
+  <!-- Google Font pour ambiance livre -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #f2efe9;
+      --text: #2f2f2f;
+      --primary: #7b5e57;   /* Brun bibliothèque */
+      --secondary: #d9cbb3; /* Beige papier */
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Merriweather', serif;
+      background-color: var(--bg);
+      color: var(--text);
+    }
+
+    header {
+      background-color: var(--primary);
+      color: white;
+      padding: 1.2rem 0;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.4rem;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      background-color: var(--secondary);
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 0.8rem 0;
+      font-size: 1rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #3e2b27;
+    }
+
+    .welcome {
+      background: url('https://images.unsplash.com/photo-1519682577862-22b62b24e493') center/cover no-repeat;
+      padding: 100px 20px;
+      text-align: center;
+      color: #fff;
+      background-attachment: fixed;
+    }
+
+    .welcome h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      background-color: rgba(0,0,0,0.5);
+      display: inline-block;
+      padding: 0.5rem 1.5rem;
+      border-radius: 8px;
+    }
+
+    .welcome p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+      background-color: rgba(0,0,0,0.4);
+      display: inline-block;
+      padding: 0.4rem 1rem;
+      border-radius: 6px;
+    }
+
+    .actions {
+      margin: 4rem auto;
+      text-align: center;
+    }
+
+    .actions a {
+      display: inline-block;
+      margin: 1rem;
+      padding: 0.8rem 2rem;
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      text-decoration: none;
+      font-size: 1rem;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    .actions a:hover {
+      background-color: #5c423b;
+    }
+
+    footer {
+      background-color: #e7e3dc;
+      color: #555;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      margin-top: 4rem;
+      border-top: 1px solid #ccc;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ===== En-tête ===== -->
+  <header>
+    <h1>Bibliothèque Municipale</h1>
+  </header>
+
+  <!-- ===== Navigation ===== -->
+  <nav>
+    <a href="#">Accueil</a>
+    <a href="#">Catalogue</a>
+    <a href="/login-admin">Admin</a>
+  </nav>
+
+  <!-- ===== Section de bienvenue ===== -->
+  <section class="welcome">
+    <h2>Bienvenue à la Bibliothèque</h2>
+    <p>Des milliers d'ouvrages accessibles à tout moment</p>
+  </section>
+
+  <!-- ===== Boutons de connexion ===== -->
+  <div class="actions">
+    <a href="/login-adherent">Connexion lecteur</a>
+    <a href="/register-adherent">Créer un compte</a>
+  </div>
+
+  <!-- ===== Pied de page ===== -->
+  <footer>
+    &copy; 2025 Bibliothèque Municipale – Tous droits réservés.
+  </footer>
+</body>
+</html>
