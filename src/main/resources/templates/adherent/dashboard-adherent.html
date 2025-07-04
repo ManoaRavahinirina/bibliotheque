@@ -179,8 +179,8 @@ footer {
               <tbody>
                 <tr th:each="emprunt : ${emprunts}">
                   <td th:text="${emprunt.livre.titre}">Titre</td>
-                  <td th:text="${#temporals.format(emprunt.dateEmprunt, 'dd/MM/yyyy')}">Date emprunt</td>
-                  <td th:text="${#temporals.format(emprunt.dateRetourPrevue, 'dd/MM/yyyy')}">Date prévue</td>
+                  <td th:text="${#temporals.format(emprunt.dateEmprunt, 'MM/dd/yyyy')}">Date emprunt</td>
+                  <td th:text="${#temporals.format(emprunt.dateRetourPrevue, 'MM/dd/yyyy')}">Date prévue</td>
                   <td>
                     <form th:action="@{'/adherent/rendre-livre/' + ${emprunt.id}}" method="post" class="d-flex">
                       <input type="date" name="dateRetourEffective" class="form-control form-control-sm me-2" required />
@@ -240,7 +240,7 @@ footer {
     const joursFeries = [
       "2025-01-01",
       "2025-04-18",
-      "2025-05-01",
+      "2025-01-05",
       "2025-05-08",
       "2025-07-14",
       "2025-08-15",
